@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Elite Showroom ERP + POS + Inventory Management System
 
 A production-ready, full-stack **Showroom Management, POS Billing, Inventory, Warehouse, Purchase, Accounts, Attendance, and Reporting Software** built for high-speed retail operations with physical unit barcode traceability and strict dual-location stock segregation.
@@ -148,3 +149,6 @@ Open your browser at **`http://localhost:5173`**.
 7. **Purchase Stock In**: Purchasing 10 units auto-generates 10 distinct random barcodes directly into Central Warehouse.
 8. **Sales Return**: Returning an item from invoice refunds customer and restocks unit to selected destination (`SHOWROOM` / `WAREHOUSE` / `DAMAGED`).
 9. **Daily Closing**: Balancing cash drawer compares calculated float against counted physical cash and stores official daily closing log.
+=======
+# POS-SOFTWARE
+>>>>>>> 4bfc6c9042e5fa7a8ed581b70e3193a2ef86223d
