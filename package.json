@@ -1,0 +1,14 @@
+{
+  "name": "showroom-erp-pos",
+  "version": "1.0.0",
+  "description": "Showroom ERP, POS Billing, Inventory, Warehouse, Purchase, Accounts, and Reports Software",
+  "scripts": {
+    "dev": "node start-dev.js",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+  },
+  "keywords": ["showroom", "erp", "pos", "inventory", "warehouse", "barcode", "billing"],
+  "author": "Antigravity Engineering",
+  "license": "ISC"
+}

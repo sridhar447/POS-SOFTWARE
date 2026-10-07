@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#080d1a] text-slate-100 min-h-screen overflow-x-hidden selection:bg-blue-600 selection:text-white;
+  }
+}
+
+/* Custom Scrollbar in Dark/Blue */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Glassmorphism & Card Styles */
+.glass-panel {
+  background: rgba(10, 15, 29, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(59, 130, 246, 0.12);
+}
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-card:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 4px 20px -2px rgba(37, 99, 235, 0.15);
+}
+
+/* Button interactive animations */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-500 text-white font-semibold shadow-lg shadow-blue-600/25 active:scale-[0.98] transition-all duration-150 border border-blue-400/30;
+}
+
+.btn-danger {
+  @apply bg-red-500/10 hover:bg-red-600 text-red-400 hover:text-white font-medium border border-red-500/20 active:scale-[0.98] transition-all duration-150;
+}
+
+.btn-secondary {
+  @apply bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium border border-slate-700 active:scale-[0.98] transition-all duration-150;
+}
+
+/* Thermal receipt print styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-receipt, #printable-receipt * {
+    visibility: visible;
+  }
+  #printable-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80mm;
+    margin: 0;
+    padding: 10px;
+    background: white !important;
+    color: black !important;
+    font-size: 12px;
+  }
+  
+  #printable-barcodes, #printable-barcodes * {
+    visibility: visible;
+  }
+  #printable-barcodes {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    background: white !important;
+    color: black !important;
+  }
+}
